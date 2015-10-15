@@ -1,0 +1,13 @@
+           <!--  <!--
+      <td><%= link_to "Show", localisation_path %></td>
+      <td><%= link_to "Edit", edit_localisation_path(@localisation) %></td>
+      
+      <td><%= link_to "Destroy", @localisation :confirm => "Are you sure?", :method => :delete %></td> --> -->
+
+
+      <!-- =begin	
+<% @localisations.each do |localisation| %>
+<p> <%= localisation.place %>
+  <%= localisation.latitude %>
+  <%= localisation.longitude %>
+=end -->

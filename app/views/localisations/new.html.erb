@@ -1,0 +1,7 @@
+<h1>Nouvelle Destination</h1>
+
+<%= form_for(@localisation) do |t| %>
+	<%= t.label "Ville" %>
+	<%= t.text_field :place %>
+	<%= t.submit "Soumettre" %>
+<% end %>

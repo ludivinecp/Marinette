@@ -1,0 +1,22 @@
+<h1> Show Page</h1>
+
+<h1>Adresse:</h1>
+<%= @localisation.place %>
+
+<h1>Lattitude</h1>
+<%= @localisation.latitude %>
+
+<h1>Longitude</h1>
+<%= @localisation.longitude %>
+
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@localisation.latitude}%2C#{@localisation.longitude}" %>
+
+
+<%= link_to "Edit", edit_localisation_path(@localisation) %>
+
+<%= link_to "Destroy", @localisation :confirm => "Are you sure?", :method => :delete %>
+
+<%= link_to "View All", localisation_path %>
+
+
+
