@@ -1,5 +1,6 @@
-<h1> Hello Marinette, where dou you want to go?</h1>
-	
+<h1> Hello Marinette, where do you want to go?</h1>
+
+
 <h1>New Destination</h1>
 
 <%= form_for(@localisation) do |t| %>
@@ -8,17 +9,32 @@
   <%= t.submit "Soumettre" %>
 <% end %>
 
-<% @localisations.reverse_each do |localisation| %>
-<p> <% localisation.place %>
-  <% localisation.latitude %>
-  <% localisation.longitude %>
 
-<iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=<%=localisation.latitude%>&lon=<%=localisation.longitude%>&name=<%=localisation.place%>&units=ca"> </iframe>
+<p> <% @localisations.place %>
+  <% @localisations.latitude %>
+  <% @localisations.longitude %>
 
-<iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="75%"
-src="http://forecast.io/embed/#lat=69.649205&lon=18.955324&name=Tromso, Norway&color=#00aaff&font=Helvetica&units=us">
-</iframe>
-view raw
-  
+
+<iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=<%=@localisations.latitude%>&lon=<%=@localisations.longitude%>&name=<%=@localisations.place%>&color=#00aaff&font=Helvetica&units=ca"> </iframe>
+
+  <div class="map" style='width: 800px;'>
+  <div id="map"></div>
+</div>
+
+<script type="text/javascript">
+
+
+var map = L.map('map').setView([<%=@localisations.latitude%>, <%=@localisations.longitude%>], 13);
+
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(map);
+
+</script>
 </p>
-<%end%>
+
+
+  
+
+
+
+ 
+ 

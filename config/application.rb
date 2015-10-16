@@ -1,7 +1,9 @@
+
+require File.expand_path('../application', __FILE__)
 require File.expand_path('../boot', __FILE__)
 require 'forecast_io'
 ForecastIO.configure do |configuration|
-  configuration.api_key = d7034196e1aa5c5ed61ea835eba3d9bc
+  configuration.api_key = "3f87620184c04eaf2b8ef017756ca84c"
 end
 require 'rails/all'
 
@@ -27,3 +29,15 @@ module Marinette
     config.active_record.raise_in_transactional_callbacks = true
   end
 end
+
+require File.expand_path('../boot', __FILE__)
+
+require 'rails/all'
+
+# if defined?(Bundler)
+#  # If you precompile assets before deploying to production, use this line
+#  Bundler.require(*Rails.groups(:assets => %w(development test)))
+#  # If you want your assets lazily compiled in production, use this line
+#  # Bundler.require(:default, :assets, Rails.env)
+# end
+

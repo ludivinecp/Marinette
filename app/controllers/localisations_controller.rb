@@ -1,9 +1,11 @@
 class LocalisationsController < ApplicationController
 
 def index
-  @localisations = Localisation.all
+  @localisations = Localisation.last
   @localisation = Localisation.new
   @forecast = ForecastIO.forecast(:latitude, :longitude)
+  
+
 end
 
 	def new
@@ -22,6 +24,8 @@ def create
 
 	def show
 	end
+
+
 
 	private
  def localisation_params

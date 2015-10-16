@@ -4,8 +4,14 @@ body {
 
 }
 
+#map {
+	height: 300px;
+	width: 800px;
+}
 
-
+.map {
+	margin: 0 auto;
+}
 
 
 
