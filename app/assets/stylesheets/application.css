@@ -13,10 +13,49 @@ body {
 	margin: 0 auto;
 }
 
+.header {
+	text-align: center;
+	margin-top: 350px;
 
 
+}
+
+.header_new{
+	text-align: center;
+	margin-top: 250px;
 
 
+}
+
+#localisation_place {
+	width: 80%;
+	height : 50px;
+}
+
+span input {
+	height : 50px;
+	width: 70px;
+	display : inline;
+	
+}
+
+
+.marinette {
+	border-radius:500px;
+	margin-left: 35%;
+	position: absolute;
+	top: 20px;
+}
+
+
+.marinette2 {
+	border-radius:500px;
+	margin-left: 43%;
+	position: absolute;
+	top: 20px;
+	width: 220px;
+	height: 200px;
+}
 
 
 /*
